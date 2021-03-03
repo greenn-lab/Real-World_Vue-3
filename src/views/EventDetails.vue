@@ -8,10 +8,15 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { EventItem } from '../types'
+import { EventItem } from '@/types'
 import EventService from '../services/EventService'
+
 export default defineComponent({
-  props: ['id'],
+  props: {
+    id: {
+      required: true
+    }
+  },
   data() {
     return {
       event: {} as EventItem
